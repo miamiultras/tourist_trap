@@ -4,7 +4,11 @@
   "description": "Tourist Trap Counter - A web app for tracking and rating tourist traps using Express.js, HTMX and Postgres",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "db:generate": "drizzle-kit generate:pg",
+    "db:push": "drizzle-kit push:pg"
   },
   "keywords": [],
   "author": "",
