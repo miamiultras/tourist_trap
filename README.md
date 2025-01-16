@@ -1,27 +1,30 @@
-# Tourist Traps Counter
+# Tourist Trap Counter 🪤
 
-A web application for tracking tourist trap locations with real-time counters using HTMX, Express.js, and Vercel Edge Config.
+Interactive web application for tracking and rating tourist traps around the world. Built with modern web technologies focusing on simplicity and real-time interactions.
+
+## Features
+
+- Real-time counter updates with HTMX
+- Sorting by popularity (counter value)
+- Preview popups for each location
+- Emoji-based interaction (🪤)
 
 ## Tech Stack
 
-- Express.js - Web server
-- HTMX - Dynamic UI updates
-- Drizzle ORM - Database operations
-- Vercel Edge Config - Configuration storage
-- TypeScript - Type safety
-- pnpm - Package management
+- **Backend**: Express.js + TypeScript
+- **Database**: PostgreSQL with Drizzle ORM
+- **Frontend**: HTMX for dynamic updates
+- **Deployment**: Vercel
 
-## Setup
+## Development
 
 ```bash
 # Install dependencies
 pnpm install
 
+# Setup database
+pnpm drizzle-kit generate:pg
+pnpm drizzle-kit push:pg
+
 # Run development server
 pnpm dev
-
-# Build for production
-pnpm build
-
-# Start production server
-pnpm start

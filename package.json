@@ -1,7 +1,7 @@
 {
-  "name": "slow_cinema",
+  "name": "tourist_trap",
   "version": "1.0.0",
-  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "description": "Tourist Trap Counter - A web app for tracking and rating tourist traps using Express.js, HTMX and Postgres",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
-    "@types/node": "^22.10.6",
+    "@types/node": "^22.10.7",
     "drizzle-kit": "^0.30.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
