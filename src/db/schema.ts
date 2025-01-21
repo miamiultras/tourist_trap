@@ -1,6 +1,6 @@
 import { pgTable, serial, text, integer, timestamp } from 'drizzle-orm/pg-core';
 
-export const touristTraps = pgTable('tourist_traps', {
+export const touristTraps = pgTable('tourist_traps_table', {
     id: serial('id').primaryKey(),
     name: text('name').notNull(),
     location: text('location').notNull(),
@@ -9,3 +9,6 @@ export const touristTraps = pgTable('tourist_traps', {
     createdAt: timestamp('created_at').defaultNow(),
     updatedAt: timestamp('updated_at').defaultNow()
 });
+
+export type TouristTrap = typeof touristTraps.$inferSelect;
+export type NewTouristTrap = typeof touristTraps.$inferInsert;
