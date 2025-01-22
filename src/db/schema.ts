@@ -7,7 +7,8 @@ export const touristTraps = pgTable('tourist_traps_table', {
     description: text('description'),
     trapCount: integer('trap_count').default(0),
     createdAt: timestamp('created_at').defaultNow(),
-    updatedAt: timestamp('updated_at').defaultNow()
+    updatedAt: timestamp('updated_at').defaultNow(),
+    imageSrc: text('image_src').notNull(),
 });
 
 export type TouristTrap = typeof touristTraps.$inferSelect;

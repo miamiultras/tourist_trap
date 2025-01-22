@@ -1,5 +1,5 @@
 {
-  "id": "f41a6392-bd2d-4ed3-9d25-a14c8bc85cab",
+  "id": "b306a5c1-2e5e-422b-8823-2ef29b78c9fe",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -52,6 +52,12 @@
           "primaryKey": false,
           "notNull": false,
           "default": "now()"
+        },
+        "image_src": {
+          "name": "image_src",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
         }
       },
       "indexes": {},
