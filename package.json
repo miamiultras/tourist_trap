@@ -7,8 +7,8 @@
     "dev": "dotenv -e .env -- ts-node src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
-    "db:generate": "dotenv -e .env -- drizzle-kit generate:pg",
-    "db:push": "dotenv -e .env -- drizzle-kit push:pg"
+    "db:generate": "dotenv -e .env -- drizzle-kit generate",
+    "db:push": "dotenv -e .env -- drizzle-kit push"
   },
   "keywords": [],
   "author": "",
