@@ -23,7 +23,7 @@ app.use((err: Error, req: express.Request, res: express.Response, next: express.
 
 // GET - List all traps
 app.get('/traps', async (req, res) => {
-    const traps = await db.select().from(touristTraps).orderBy(touristTraps.trapCount);
+    const traps = (await db.select().from(touristTraps).orderBy(touristTraps.trapCount)).reverse();
     const html = traps.map(trap => `
         <div class="trap-card">
             <img src="${trap.imageSrc}" alt="${trap.name}" class="trap-image">
