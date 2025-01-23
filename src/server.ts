@@ -13,6 +13,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: true }));
+app.use('/images', express.static(path.join(__dirname, '../public/images')));
 
 // Error handling middleware
 app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
@@ -90,3 +91,5 @@ app.listen(port, () => {
 }).on('error', (err) => {
     console.error('Server failed to start:', err);
 });
+
+export default app;

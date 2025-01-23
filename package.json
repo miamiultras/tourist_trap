@@ -8,12 +8,14 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "db:generate": "dotenv -e .env -- drizzle-kit generate",
-    "db:push": "dotenv -e .env -- drizzle-kit push"
+    "db:push": "dotenv -e .env -- drizzle-kit push",
+    "vercel-build": "tsc && cp -r public dist/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@vercel/node": "^5.0.2",
     "@vercel/postgres": "^0.10.0",
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.38.4",
