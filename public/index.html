@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourist Trap</title>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    Tourist Trap
+    <h1>Tourist Trap <span id="trap-emoji">🪤</span></h1>
+    <div id="trap-list" hx-get="/traps" hx-trigger="load">
+        <!-- Traps will be loaded here -->
+    </div>
 </body>
 </html>
+    

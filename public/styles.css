@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+
+/* Base styles */
+body {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #ffc3f8;;
+}
+
+h1 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    text-transform: uppercase;
+    transform: rotate(-2deg);
+}
+
+#trap-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.trap-card {
+    background: #fff;
+    border: 4px solid #000;
+    border-radius: 0;
+    box-shadow: 8px 8px 0 #000;
+    transform: rotate(1deg);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trap-card:hover {
+    transform: rotate(-1deg) translateY(-5px);
+    box-shadow: 12px 12px 0 #000;
+}
+
+.trap-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #000;
+}
+
+.trap-card h3 {
+    margin: 1rem;
+    color: #000;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.trap-card p {
+    margin: 0.5rem 1rem;
+    color: #000;
+}
+
+.trap-card button {
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    padding: 1rem;
+    background: #ffeb3b; /* Bright yellow for better contrast */
+    border: 3px solid #000;
+    color: #000;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transform: rotate(-1deg);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trap-card button:hover {
+    background: #fff176; /* Lighter yellow on hover */
+    transform: rotate(1deg);
+    box-shadow: 4px 4px 0 #000;
+}
