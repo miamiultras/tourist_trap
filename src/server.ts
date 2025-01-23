@@ -11,7 +11,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: true }));
 
 // Error handling middleware
@@ -23,14 +23,29 @@ app.use((err: Error, req: express.Request, res: express.Response, next: express.
 // GET - List all traps
 app.get('/traps', async (req, res) => {
     const traps = await db.select().from(touristTraps).orderBy(touristTraps.trapCount);
-    res.json(traps);
+    const html = traps.map(trap => `
+        <div class="trap-card">
+            <img src="${trap.imageSrc}" alt="${trap.name}" class="trap-image">
+            <h3>${trap.name}</h3>
+            <p>${trap.location}</p>
+            <p>${trap.description}</p>
+            <button 
+                hx-patch="/traps/${trap.id}/increment"
+                hx-swap="outerHTML"
+                hx-target="closest .trap-card"
+            >
+                🪤 Count: ${trap.trapCount}
+            </button>
+        </div>
+    `).join('');
+    res.send(html);
 });
 
 // POST - Add new trap
 app.post('/traps', async (req, res) => {
-    const { name, location, description } = req.body;
+    const { name, location, description, imageSrc } = req.body;
     const newTrap = await db.insert(touristTraps)
-        .values({ name, location, description })
+        .values({ name, location, description, imageSrc })
         .returning();
     res.json(newTrap[0]);
 });
@@ -46,7 +61,28 @@ app.patch('/traps/:id/increment', async (req, res) => {
         })
         .where(eq(touristTraps.id, parseInt(id)))
         .returning();
-    res.json(updated[0]);
+
+    const trap = updated[0];
+    const html = `
+        <div class="trap-card">
+            <img src="${trap.imageSrc}" alt="${trap.name}" class="trap-image">
+            <h3>${trap.name}</h3>
+            <p>${trap.location}</p>
+            <p>${trap.description}</p>
+            <button 
+                hx-patch="/traps/${trap.id}/increment"
+                hx-swap="outerHTML"
+                hx-target="closest .trap-card"
+            >
+                🪤 Count: ${trap.trapCount}
+            </button>
+        </div>
+    `;
+    res.send(html);
+});
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 app.listen(port, () => {
