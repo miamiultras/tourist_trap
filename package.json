@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vercel/node": "^5.1.15",
+    "@vercel/node": "^5.1.16",
     "@vercel/postgres": "^0.10.0",
     "dotenv": "^16.5.0",
     "drizzle-orm": "^0.38.4",
@@ -26,8 +26,8 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.1",
-    "@types/node": "^22.15.14",
-    "@types/pg": "^8.15.0",
+    "@types/node": "^22.15.17",
+    "@types/pg": "^8.15.1",
     "dotenv-cli": "^8.0.0",
     "drizzle-kit": "^0.30.6",
     "ts-node": "^10.9.2",
