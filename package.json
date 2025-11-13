@@ -15,22 +15,22 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vercel/node": "^5.0.2",
+    "@vercel/node": "^5.5.6",
     "@vercel/postgres": "^0.10.0",
-    "dotenv": "^16.4.7",
+    "dotenv": "^16.6.1",
     "drizzle-orm": "^0.38.4",
     "express": "^4.21.2",
     "htmx.org": "^1.9.12",
-    "pg": "^8.13.1",
-    "postgres": "^3.4.5"
+    "pg": "^8.16.3",
+    "postgres": "^3.4.7"
   },
   "devDependencies": {
-    "@types/express": "^5.0.0",
-    "@types/node": "^22.10.7",
-    "@types/pg": "^8.11.10",
+    "@types/express": "^5.0.5",
+    "@types/node": "^22.19.1",
+    "@types/pg": "^8.15.6",
     "dotenv-cli": "^8.0.0",
-    "drizzle-kit": "^0.30.2",
+    "drizzle-kit": "^0.30.6",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.9.3"
   }
 }
