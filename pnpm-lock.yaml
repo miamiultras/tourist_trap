@@ -1037,8 +1037,8 @@ packages:
   function-bind@1.1.2:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
 
-  gel@2.1.1:
-    resolution: {integrity: sha512-Newg9X7mRYskoBjSw70l1YnJ/ZGbq64VPyR821H5WVkTGpHG2O0mQILxCeUhxdYERLFY9B4tUyKLyf3uMTjtKw==}
+  gel@2.2.0:
+    resolution: {integrity: sha512-q0ma7z2swmoamHQusey8ayo8+ilVdzDt4WTxSPzq/yRqvucWRfymRVMvNgmSC0XK7eNjjEZEcplxpgaNojKdmQ==}
     engines: {node: '>= 18.0.0'}
     hasBin: true
 
@@ -2184,7 +2184,7 @@ snapshots:
       '@esbuild-kit/esm-loader': 2.6.5
       esbuild: 0.19.12
       esbuild-register: 3.6.0(esbuild@0.19.12)
-      gel: 2.1.1
+      gel: 2.2.0
     transitivePeerDependencies:
       - supports-color
 
@@ -2463,7 +2463,7 @@ snapshots:
 
   function-bind@1.1.2: {}
 
-  gel@2.1.1:
+  gel@2.2.0:
     dependencies:
       '@petamoriken/float16': 3.9.3
       debug: 4.4.3
