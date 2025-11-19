@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@vercel/node':
-        specifier: ^5.5.6
-        version: 5.5.6
+        specifier: ^5.5.7
+        version: 5.5.7
       '@vercel/postgres':
         specifier: ^0.10.0
         version: 0.10.0
@@ -486,8 +486,8 @@ packages:
   '@types/serve-static@1.15.10':
     resolution: {integrity: sha512-tRs1dB+g8Itk72rlSI2ZrW6vZg0YrLI81iQSTkMmOqnqCaNr/8Ek4VwWcN5vZgCYWbg/JJSGBlUaYGAOP73qBw==}
 
-  '@vercel/build-utils@13.0.1':
-    resolution: {integrity: sha512-RVWYBhVAwoJsuRRq/93OnKVaYEdPlceYnz5f3daRQvrhmjoYRup3y/uy+/SQ5W9I+c0kWdsbogkJ5oBkaWWMOQ==}
+  '@vercel/build-utils@13.0.2':
+    resolution: {integrity: sha512-bJL9P4R7hB+llN32sJ9gJqZo6Kx3atS9CJahJjuQypbdYYS2DJh06InAPLhLk1aresa3GOodHksxBsv148r3gQ==}
 
   '@vercel/error-utils@2.0.3':
     resolution: {integrity: sha512-CqC01WZxbLUxoiVdh9B/poPbNpY9U+tO1N9oWHwTl5YAZxcqXmmWJ8KNMFItJCUUWdY3J3xv8LvAuQv2KZ5YdQ==}
@@ -497,8 +497,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  '@vercel/node@5.5.6':
-    resolution: {integrity: sha512-U8x9Bh70vX74fAE+3G6+M3QdWyTe1gLUzDxG3s2P2SvYRkvtpCkCO2K8UCeceyA7uGH9+XB9nU6PZy08UK+17w==}
+  '@vercel/node@5.5.7':
+    resolution: {integrity: sha512-admBrZcsqa3lTjjomJwCYdf9AJ1OKHc3pjKmVWsPP6t+umRdk8jx50WSqaodIZjMEGOEzXBIXlCTTDeJwdInPw==}
 
   '@vercel/postgres@0.10.0':
     resolution: {integrity: sha512-fSD23DxGND40IzSkXjcFcxr53t3Tiym59Is0jSYIFpG4/0f0KO9SGtcp1sXiebvPaGe7N/tU05cH4yt2S6/IPg==}
@@ -1057,8 +1057,8 @@ packages:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
     engines: {node: '>= 6'}
 
-  glob@10.4.5:
-    resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
+  glob@10.5.0:
+    resolution: {integrity: sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg==}
     hasBin: true
 
   gopd@1.2.0:
@@ -1946,7 +1946,7 @@ snapshots:
       '@types/node': 22.19.1
       '@types/send': 0.17.6
 
-  '@vercel/build-utils@13.0.1': {}
+  '@vercel/build-utils@13.0.2': {}
 
   '@vercel/error-utils@2.0.3': {}
 
@@ -1959,7 +1959,7 @@ snapshots:
       async-sema: 3.1.1
       bindings: 1.5.0
       estree-walker: 2.0.2
-      glob: 10.4.5
+      glob: 10.5.0
       graceful-fs: 4.2.11
       node-gyp-build: 4.8.4
       picomatch: 4.0.3
@@ -1969,13 +1969,13 @@ snapshots:
       - rollup
       - supports-color
 
-  '@vercel/node@5.5.6':
+  '@vercel/node@5.5.7':
     dependencies:
       '@edge-runtime/node-utils': 2.3.0
       '@edge-runtime/primitives': 4.1.0
       '@edge-runtime/vm': 3.2.0
       '@types/node': 16.18.11
-      '@vercel/build-utils': 13.0.1
+      '@vercel/build-utils': 13.0.2
       '@vercel/error-utils': 2.0.3
       '@vercel/nft': 0.30.1
       '@vercel/static-config': 3.1.2
@@ -2500,7 +2500,7 @@ snapshots:
     dependencies:
       is-glob: 4.0.3
 
-  glob@10.4.5:
+  glob@10.5.0:
     dependencies:
       foreground-child: 3.3.1
       jackspeak: 3.4.3
